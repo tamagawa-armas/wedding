@@ -25,10 +25,30 @@
       background-color: #ddd;
       color: black;
     }
+        
+        /*Dividing image */
+    .divider {
+      width: 100%; /* This makes the image span the full width */
+      display: block; /* Ensures the image is displayed as a block element */
+      height: auto; /* Maintains the aspect ratio of the image */
+    }
+        
+    .divider-bar {
+      width: 100%;           /* Makes the divider span the full width of the page */
+      height: 4px;           /* Height of the divider (adjustable) */
+      background-color: #614051;  /* Color of the divider (change to your preferred color) */
+      border: none;          /* No borders around the divider */
+      margin: 20px 0;        /* Add some space above and below the divider */
+    }
+        
+    li {
+      margin-bottom: 10px; /* Adds space between each list item */
+    }
+
     </style>
     
         <script>
-        var password = 'sktama'; // Set the password here
+        var password = 'aloha'; // Set the password here
         var userPassword = prompt("Please enter the password to view this page");
 
         if (userPassword !== password) {
@@ -45,7 +65,7 @@
       <!-- Top navigation bar -->
   <div class="navbar">
     <a href="#home">Home</a>
-    <a href="rsvp">RSVP</a>
+    <a href="#rsvp">RSVP</a>
     <a href="#hawaii">Hawaii</a>
     <a href="#california">California</a>
     <a href="#registry">Registry</a>
@@ -58,26 +78,34 @@
     
 
     
-        <p>Welcome to our webpage, under construction.</p>
+        <p>Welcome to our wedding website, under construction.</p>
         
     </div>
         
     <div id="rsvp">
         <h2> RSVP</h2>
         
-        <p> RSVP by May 14, 2025</p>
+        <!--<p> RSVP by May 14, 2025</p>-->
         
         <p> The RSVP form is not available yet. Please check back after invitations have been sent out in late January/early February.</p>
         
         </div>
+    
+    
         
         
         <div id="hawaii">
+        
+        <img src="hawaii-pic-crop.jpg" alt="Divider Image" class="divider">
         <h2> Hawaii Ceremony and Reception</h2>
             
         <p> June 28, 2025 at the Hilton Hawaiian Village</p>
         
         <h3> Timeline for Hawaii Event</h3>
+            
+            <p>Coming soon</p>
+            
+            <!--
             <table border=1>
                 <thead>
                     <tr><td>Time</td>
@@ -105,35 +133,49 @@
 
                     </tbody>
             </table>
+                -->
             
+            <div class="divider-bar"></div>
             <h3> Parking for Hawaii Event</h3>
             <p> Park in the <a href='https://maps.app.goo.gl/NA3iQSXirmFy6vWL8'; target="_blank">main Hilton lot</a>. The address for the property is 2005 Kalia Road. From Kalia Road, turn onto Rainbow Drive and follow the signs for self parking, on the right. There should be kiosks to pay for parking near our reception room. </p> 
             
             <p>As of 2024, self parking for events is $15. Overnight parking with the hotel rooms is significantly more.</p>
             
+            
+            <div class="divider-bar"></div>
+            
             <h3>Attire for Hawaii Event</h3>
             
-                <p> The dress code for our wedding will be business casual/aloha. You can click here [link not available yet] for more details on what this means.</p>
+                <p> The dress code for our wedding will be aloha formal/business casual. You can click here [link not available yet] for more details on what this means.</p>
             
                 <p> The ceremony, pupu/cocktail hour, and reception will all be held in air conditioned spaces indoors. If you are prone to getting cold, we recommend bringing a light jacket.</p>
             
             
+            <div class="divider-bar"></div>
             
             <h3> Travel Information for Hawaii Event</h3>
             
                 <h4> Airport</h4>
-                    <p>Use the Daniel K. Inouye International Airport (HNL)</p>
+                    <p>Use the Daniel K. Inouye International Airport in Honolulu (HNL).</p>
             
                 <h4> Groud Transportation on Oahu</h4>
                     <p>If you plan to stay on Oahu for more than just our wedding, we recommend renting a car from the airport.</p>
             
-            <p>If you are planning to mostly stay in Waikiki, but leave once or twice to explore, consider looking into renting a car from <a href="https://www.drivehui.com/"; target="_blank">Hui</a>. Similar to Zipcar, you can do short term rentals from Waikiki. Note that the company uses dash cams to moniter driving safety.</p>
+            <p>If you are planning to mostly stay in Waikiki, but leave once or twice to explore, consider looking into renting a car from <a href="https://www.drivehui.com/"; target="_blank">Hui</a>. Similar to Zipcar, you can do short term rentals from Waikiki. Note that the company uses dash cams to monitor driving safety.</p>
             
-                    <p>Note about rental cars: if you're from the mainland, when you fill gas you might notice that the splash guard and locking lever are missing from the nozzles. This is normal -just manually keep the lever depressed and it will still automatically shut off when your tank is full.</p>
+                    <p>Notes about rental cars:</p>
+                        <ul><li>
+                            If you're from the mainland, when you fill gas you might notice that the splash guard and locking lever are missing from the nozzles. This is normal - just manually keep the lever depressed and it will still automatically shut off when your tank is full.
+                            </li>
+                            <li>For those traveling with children, you can read up on child seat laws <a href="https://hidot.hawaii.gov/highways/safe-communites/child-passenger-safety/" target="_blank">here</a>.</li>
+            
+            
+                        </ul>
+                        
             
                 <h4> Hotel in Hawaii</h4>
                 
-                    <p> The wedding will be held at the Hilton Hawaiian Village in Waikiki. You can use the coupon code WED to get a discount on rooms (Hawaii residents, contact Sheri for the Kama`aina code), but note that there may be better deals available, especially if you book early. This hotel will be ideal for guests who want a convenient location in relation to the wedding and want to stay in the heart of Waikiki with easy access to the beach and other tourist activities.   The wedding venue is connected to the Kalia Tower, but the entire complex is easily accessible from our ceremony and reception area.</p>
+                    <p> The wedding will be held at the <a href="https://hiltonhawaiianvillage.com"; target="_blank">Hilton Hawaiian Village</a> in Waikiki. You can use the coupon code WED to get a discount on rooms (Hawaii residents, contact Sheri for the Kama`aina code), but note that there may be better deals available, especially if you book early. This hotel will be ideal for guests who want a convenient location in relation to the wedding and want to stay in the heart of Waikiki with easy access to the beach and other tourist activities.   The wedding venue is connected to the Kalia Tower, but the entire complex is easily accessible from our ceremony and reception area.</p>
             
                     <p> For another option, we highly recommend the <a href="https://www.alamoanahotelhonolulu.com/"; target="_blank">Ala Moana Hotel</a>. Located less than a mile from our wedding venue and attached to a large outdoor mall with many food options, this hotel is ideal for guests who want a cheaper but still convenient option. This location is walkable to our venue if you tolerate heat and humidity well (Hawaii is warm, even at night), and we recommend walking in groups at night.</p>
             
@@ -141,79 +183,125 @@
             
                     <p>Note: if you plan on preparing your own food while in Hawaii, be sure to thoroughly wash all locally grown produce that you plan to consume raw. <b>Thoroughly scrub</b> every surface under running water.</p>
             
-            <h3> Things To Do in Hawaii</h3>
+            <div class="divider-bar"></div>
+            
+            <h3> Things to Do on Oahu</h3>
                 <p> Click <a href="to-do-hawaii.html">here</a> [link under construction] for an interactive version of this list.</p>
                 <p>Here are some of our favorite places on Oahu.</p>
                 
                 <ul>
-                <li>Places to Eat</li>
+                <li>Places to Get Food</li>
                     <ol>
-                    <li><a href="https://www.zippys.com/">Zippy's Restaurant</a><br>This is a popular local diner. Sheri's favorite meal is the chili and chicken mixed plate, but other popular dishes include their Zip Min, Zip Pac (President Obama's favorite), and Korean fried chicken. For dessert, try their Napples!</li>
+                    <li><a href="https://www.zippys.com/"; target="_blank">Zippy's Restaurant</a><br>This is a popular local diner. Sheri's favorite meal is the chili and chicken mixed plate, but other popular dishes include their Zip Min, Zip Pac (President Obama's favorite), and Korean fried chicken. For dessert, try their Napples!</li>
                         
-                    <li><a href="https://www.lilihabakery.com/">Liliha Bakery</a><br>They are famous for their coco puffs and local style breakfasts. Sheri also really enjoys their chantilly cakes - the frosting is unique and unmatched. </li>
-                    <li><a href="https://www.alamoanacenter.com/en/">Ala Moana Shopping Center</a>
+                    <li><a href="https://www.lilihabakery.com/"; target="_blank">Liliha Bakery</a><br>They are famous for their coco puffs and local style breakfasts. Sheri also really enjoys their chantilly cakes - the frosting is unique and unmatched. </li>
+                    <li><a href="https://www.alamoanacenter.com/en/"; target="_blank">Ala Moana Shopping Center</a>
                         <br>
                         This is a mall with a multitude of places to eat. For fast casual local flavors, check out the The Lanai.
                         </li>
-                    <li><a href="https://www.haleiwajoes.com/">Haleiwa Joes</a></li>
-                    <li><a href="https://53bythesea.com/">53 by the Sea</a></li>
-                    <li><a href="https://yoheisushi.com/">Yohei Sushi</a></li>
-                    <li><a href="https://www.waiaholepoifactory.com/">Waiahole Poi Factory</a></li>
-                    <li><a href="https://leonardshawaii.com/home/">Leonard's Bakery</a></li>
-                    <li><a href="https://www.waiolashaveice.co/">Waiola Shave Ice</a></li>
-                    <li><a href="https://matsumotoshaveice.com/">Matsumoto's Shave Ice</a></li>
-                    <li><a href="https://foodland.com/">Foodland's Poke</a></li>
+                    <li><a href="https://www.haleiwajoes.com/"; target="_blank">Haleiwa Joes</a><br>
+                        The Kaneohe location has delicious local-style food with beautiful views of the Koolau mountain range. Note that they don't take reservations and have a small parking lot, so your best shot at a table is to show up before they open. The Haleiwa location is presumably also good, but we've never been out there.</li>
+                    <li><a href="https://53bythesea.com/"; target="_blank">53 by the Sea</a>
+                        <br> Delicious food and beautiful views.</li>
+                    <li><a href="https://yoheisushi.com/"; target="_blank">Yohei Sushi</a>
+                        <br>The Dillingham location is a favorite for Sheri's family. Sheri's favorite is the Yohei special Sushi Zen.</li>
+                    <li><a href="https://www.waiaholepoifactory.com/"; target="_blank">Waiahole Poi Factory</a>
+                        <br>All their food is super ono but their Sweet Lady of Waiahole dessert is da best.</li>
+                    <li><a href="https://leonardshawaii.com/home/"; target="_blank">Leonard's Bakery</a>
+                        <br>The best malasadas on Oahu. Look for their malasada trucks around the island.</li>
+                    <li><a href="https://www.waiolashaveice.co/"; target="_blank">Waiola Shave Ice</a>
+                        <br>A contender for the best shave ice. If you don't know what flavor to get, try rainbow!</li>
+                    <li><a href="https://matsumotoshaveice.com/"; target="_blank">Matsumoto's Shave Ice</a>
+                        <br>Better shave ice than Waiola in some opinions. You can't go wrong with the rainbow flavor. Pro tips for eating shave ice: if it's called shave<b>d</b> ice find another place, and lean forward while you eat so you don't spill on yourself.</li>
+                    <li><a href="https://foodland.com/";target="_blank">Foodland's Poke</a>
+                        <br>Many people say the best poke is found at this grocery store.</li>
                         
-                    <li><a href="https://www.timessupermarkets.com/">Times Supermarket</a></li>
-                    <li><a href="https://wholesaleunlimitedhi.com/">Wholesale Unlimited</a></li>
-                    <li><a href="https://www.bigislandcandies.com/">Big Island Candies</a></li>
+                    <li><a href="https://www.timessupermarkets.com/"; target="_blank">Times Supermarket's Poke</a>
+                        <br>Sheri's family often gets their poke from Times instead of Foodland. The Hawaiian style and ahi shoyu are her favorites.</li>
+                    <li><a href="https://wholesaleunlimitedhi.com/">Wholesale Unlimited</a>
+                        <br>This is the go-to store for local snacks. If you don't know what you want, try everything!</li>
+                    <li><a href="https://www.bigislandcandies.com/">Big Island Candies</a>
+                        <br>Originally from the Big Island, they are famous for their diagonal-dipped shortbread cookies. Their brownies are also delicious.</li>
+                    <li>McDonald's
+                        <br>While you're in Hawaii, try their local breakfast platters (with spam and portuguese sausage) and their original deep fried apple pies. They occasionally also have taro pies and haupia pies.</li>
                     </ol>
             
                 <li>Places to Learn</li>
                     <ol>
-                    <li><a href="https://www.polynesia.com/">Polynesian Cultural Center</a> <br> If you want to attend their luau dinner, be sure to reserve your space early!<br> Come learn about history and culture throughout the Pacific at this world-class interactive cultural museum. Attend live cultural presentations, sample food, make traditional crafts, and much more. If you want to fully experience all of the villages, plan to be here for more than one day. It is about an hour drive from our wedding venue, so plan accordingly. There are also available shuttles from Waikiki. You will spend a lot of time outdoors, so wear sunscreen and consider bringing a hat/sunglasses.</li>
+                    <li><a href="https://www.polynesia.com/"; target="_blank">Polynesian Cultural Center</a> <br> If you want to attend their luau dinner, be sure to reserve your space early!<br> Come learn about history and culture throughout the Pacific at this world-class interactive cultural museum. Attend live cultural presentations, sample food, make traditional crafts, and much more. If you want to fully experience all of the villages, plan to be here for more than one day. It is about an hour drive from our wedding venue, so plan accordingly. There are also available shuttles from Waikiki. You will spend a lot of time outdoors, so wear sunscreen and consider bringing a hat/sunglasses.</li>
                         
-                    <li><a href="https://www.bishopmuseum.org/">Bishop Museum</a><br>Learn about the history of Hawaii, in a building constructed in part by Andrew's ancestors! And stop by the other buildings for some fun science exhibits.</li>
+                    <li><a href="https://www.bishopmuseum.org/"; target="_blank">Bishop Museum</a><br>Learn about the history of Hawaii, in a building constructed in part by Andrew's ancestors! And stop by the other buildings for some fun science exhibits.</li>
                         
-                    <li><a href="http://hawaiiplantationvillage.org/">Plantation Village</a><br> Learn how many early immigrants to Hawaii lived and worked, including Sheri's ancestors. This is partially outdoors, so wear sunscreen (and bug spray...get plenty mosquitoes).</li>
+                    <li><a href="http://hawaiiplantationvillage.org/"; target="_blank">Plantation Village</a><br> Learn how many early immigrants to Hawaii lived and worked, including Sheri's ancestors. This is partially outdoors, so wear sunscreen (and bug spray...get plenty mosquitoes).</li>
                         
-                    <li><a href="https://pearlharbor.org/">Pearl Harbor</a><br>
+                    <li><a href="https://pearlharbor.org/">Pearl Harbor</a> and 
                         <a href="https://www.pearlharboraviationmuseum.org/">Pearl Harbor Aviation Museum</a><br>Learn about Hawaii's history during WW2. It's worth it to go to the top of the tower at the aviation museum. Also be sure to check out the actual bullet holes in Hangar 49 from the attack on Pearl Harbor.
-                        <br>While you're here, also stop by the <a href="https://ussmissouri.org/">USS Missouri</a> and </li>
-                    <li>Iolani Palace<br> Learn about Hawaiian history and culture in an actual royal palace.</li>
-                    <li>Honolulu Zoo and Waikiki Aquarium<br>Be sure to say hi to Rusty the orangutan, and make a quick stop by the aquarium while you're in the area.</li>
-                    <li>Dole Plantation</li>
+                        <br>While you're here, also stop by the <a href="https://ussmissouri.org/">USS Missouri</a>. </li>
+                    <li><a href="https://www.iolanipalace.org/"; target="_blank">Iolani Palace</a>
+                        <br> Learn about Hawaiian history and culture in an actual royal palace.</li>
+                    <li><a href="https://www.honoluluzoo.org/"; target="_blank">Honolulu Zoo</a> and <a href="https://www.waikikiaquarium.org/"; target="_blank">Waikiki Aquarium</a><br>Check out native plants and animals, say hi to Rusty the orangutan, and make a quick stop by the aquarium while you're in the area.</li>
+                    <li><a href="https://www.doleplantation.com/";target="_blank">Dole Plantation</a>
+                        <br>Explore the pineapple maze and enjoy some fresh Dole Whip!</li>
                     
                     
                     </ol>
-                <li>Places to Take Pictures</li>
+                <li>Places to Sightsee</li>
                     <ol>
-                    <li>Hoomaluhia Botanical Garden</li>
-                    <li>Kualoa Ranch</li>
-                    <li>Maunawili Trail</li>
-                    <li>Aiea Loop Trail</li>
-                    <li>Makapuu Lighthouse Trail</li>
-                    <li>Foster Gardens</li>
-                    <li>Lyons Arboretum</li>
-                    <li>Byodo Inn</li>
-                    <li>Waikiki Beach</li>
-                    <li>Kailua Beach</li>
-                    <li>Kualoa Beach</li>
+                    <li><a href="https://www.honolulu.gov/parks/hbg.html?id=569:ho"; target="_blank">Hoomaluhia Botanical Garden</a>
+                        <br>
+                        This is a large, beautiful botanical garden with a pond where you can feed the fish in a big pond. Further toward the back there are many quiet, easy hiking trails to explore. Please be respectful of the locals and DO NOT show up early and block the road as people are trying to get to work.</li>
+                    <li><a href="https://www.kualoa.com/"; target="_blank">Kualoa Ranch</a>
+                        <br>Check out the farm where Jurassic Park was (partially filmed).</li>
+                    <li><a href="https://www.alltrails.com/trail/hawaii/oahu/maunawili-falls-from-pali-highway"; target="_blank">Maunawili Hiking Trail</a>
+                        <br>This is a beautiful, but somewhat challenging and often muddy hike. On all hikes, be sure to wear bug spray (mosquitoes), and DO NOT go hiking on the mountain if it is raining.</li>
+                    <li><a href="https://www.alltrails.com/trail/hawaii/oahu/aiea-loop-trail"; target="_blank">Aiea Loop Trail</a>
+                        <br>Another beautiful hike, easier and generally less muddy than Maunawili. There used to be the remains of a crashed WWII plane, but it's unclear if it's still there. Watch your step for dog poop. </li>
+                    <li><a href="https://www.alltrails.com/trail/hawaii/oahu/makapu-u-point-lighthouse-trail"; target="_blank">Makapuu Lighthouse Trail</a>
+                        <br>If you're looking for an easy, paved hike with beautiful ocean views, this is the hike for you! A lot of people also like to get out here early and watch the sunrise. In winter this is also a popular whale watching spot.</li>
+                    <li><a href-="https://www.honolulu.gov/cms-dpr-menu/site-dpr-sitearticles/568-foster-botanical-garden.html"; target="_blank">Foster Gardens</a>
+                        <br>A botanical garden</li>
+                    <li><a href="https://manoa.hawaii.edu/lyon/"; target="_blank">Lyon Arboretum</a>
+                        <br>Another botanical garden.</li>
+                    <li><a href="https://byodo-in.com/"; target="_blank">Byodo-In</a>
+                        <br>A very instagramable traditional Japanese temple. Buy tickets ahead of time online.</li>
+                    <li>Waikiki Beach
+                        <br>No visit to Oahu is complete without visiting this iconic beach. Just behind our wedding venue, there's not reason not to go for a stroll.</li>
+                    <li>Kailua Beach
+                        <br> This is another iconic beach, slightly less crowded than Waikiki.</li>
+                    <li>Kualoa Regional Park
+                        <br>If you're looking for a peaceful beach that hasn't been overrun by tourists (yet), check this place out. There's also a small native bird sanctuary. Great for barbecuing. Please be respectful of the locals trying to enjoy this space. Also beware of Portuguese-man-of-wars.</li>
                     <li>DO NOT GO: Haiku Stairs <br>DO NOT go on this trail. You may see some things on the internet about this, but it was deemed unsafe and it is illegal to go on this trail. Don't be a stupid tourist, it's disrespectful to the people who have to rescue you and the people who have to pay for it.</li>
                     </ol>
                 </ul>
             
         </div>
+    
+        <div>
+            <p><a href="#home">Back to top</a></p>
+        </div>
         
         
+    
         <div id="california">
+        <img src="california-pic-crop.jpg" alt="Divider Image" class="divider">
+        
         <h2> California Reception</h2>
             
             <p> Date: TBD, July 2025</p>
             <p> Location: TBD, driving distance from Long Beach</p>
             
-            <h3> Attire</h3>
+            <div class="divider-bar"></div>
+            
+            <h3>Parking for California Event</h3>
+            
+            The community center has ample parking.
+            
+            <div class="divider-bar"></div>
+            
+            <h3> Attire for California Event</h3>
                 <p> The attire for this reception will be dressy casual. You can click here [link not available yet] for more information on what this means. The space will be air conditioned, so if you are prone to getting cold you should bring a light jacket.</p>
+            
+            <div class="divider-bar"></div>
             
             <h3>Travel Information</h3>
             
@@ -229,12 +317,25 @@
             
             <h4>Hotel</h4>
             
-            <h3>Things To Do</h3>
+            <p>Coming soon</p>
+            
+            <div class="divider-bar"></div>
+            
+            <h3>Things To Do in "Los Angeles"</h3>
+            
+            <p>Coming soon</p>
+            
             
             
         </div>
     
+        <div>
+            <p><a href="#home">Back to top</a></p>
+        </div>
+    
         <div id="registry">
+            
+        <img src="taro-patch-crop.jpg" alt="Divider Image" class="divider">
         <h2>Registry</h2>
             
             <p>Since we've both been independent adults for over a decade, we have more than enough of our own household items.</p>
@@ -243,7 +344,7 @@
     
         </div>
     
-        <div id="FAQ">
+        <div id="faq">
         <h2>FAQ</h2>
         
             <ul>
@@ -269,8 +370,12 @@
     
         </div>
     
+        <div>
+            <p><a href="#home">Back to top</a></p>
+        </div>
     
-    <div ><p style="text-align:center; color:#b8b6b6;">Last updated 1/19/2024</p>
+    
+    <div ><p style="text-align:center; color:#b8b6b6;">Last updated 1/20/2025</p>
             <p style="text-align:center; color:#8b86b6;">Website comments: contact Sheri</p></div>
     
     </body>
