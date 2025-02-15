@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    </head>    
+    <link rel="icon" type="image/png" href="hibiscus%20rebellion%20icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do on Oahu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #614051;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #483248;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
-<p>This page is under construction. Please check back later!</p>
+
+    <div class="container">
+        <h1>What should I do on Oahu?</h1>
+        <div id="question-container">
+            <p id="question">What would you like to do?</p>
+            <div id="options">
+                <button onclick="chooseOption('A')">Eat</button>
+                <button onclick="chooseOption('B')">Learn</button>
+                <button onclick="chooseOption('C')">Sightsee</button>
+            </div>
+        </div>
+        <div id="result" style="display:none;"></div>
+    </div>
+
+    <script>
+        function chooseOption(choice) {
+            document.getElementById("options").style.display = "none";
+
+            if (choice === 'A') {
+                showNextChoices2("A snack", "A meal");
+            } else if (choice === 'B') {
+                showNextChoices2("History and Culture", "Science and Nature");
+            } else if (choice === 'C') {
+                showNextChoices4("Hike","Beach","Botanical Garden","Other");
+            } else if (choice === 'A snack') {
+                showNextChoices2("Something sweet", "Something savory");
+            } else if (choice == 'Something sweet') {
+                showResult("sweet-snacks");
+            } else if (choice == "Something savory") {
+                showResult("savory-snacks");
+            } else if (choice == "History and Culture") {
+                showResult("history-culture");
+            } else if (choice== "Science and Nature") {
+                showResult("science-nature");
+            } else if (choice == "Hike") {
+                showResult("hikes");
+            } else if (choice =="Beach") {
+                showResult("beaches");
+            } else if (choice =="Botanical Garden") {
+                showResult("botanical-gardens");
+            } else if (choice == "Other"){
+                showResult("other-to-do");
+            } else if (choice =="A meal") {
+                showNextChoices2("Breakfast", "Lunch or Dinner");
+            } else if (choice =="Breakfast") {
+                showResult("breakfast");
+            } else if (choice=="Lunch or Dinner") {
+                showNextChoices2("Casual Restaurant","Aloha Formal Restaurant");
+            } else if (choice=="Casual Restaurant") {
+                showResult("food-casual");
+            } else if (choice=="Aloha Formal Restaurant") {
+                showResult("food-fancy")
+            }
+            
+        }
+
+        function showNextChoices2(option1, option2) {
+            let questionText = `What do you want?`;
+            document.getElementById("question").innerText = questionText;
+            
+            let optionsHTML = `
+                <button onclick="chooseOption('${option1}')">${option1}</button>
+                <button onclick="chooseOption('${option2}')">${option2}</button>
+            `;
+            
+            document.getElementById("options").innerHTML = optionsHTML;
+            document.getElementById("options").style.display = "block";
+        }
+        
+        function showNextChoices4(option1, option2, option3, option4) {
+            let questionText = `What do you want?`;
+            document.getElementById("question").innerText = questionText;
+            
+            let optionsHTML = `
+                <button onclick="chooseOption('${option1}')">${option1}</button>
+                <button onclick="chooseOption('${option2}')">${option2}</button>
+                <button onclick="chooseOption('${option3}')">${option3}</button>
+                <button onclick="chooseOption('${option4}')">${option4}</button>
+            `;
+            
+            document.getElementById("options").innerHTML = optionsHTML;
+            document.getElementById("options").style.display = "block";
+        }
+
+        function showResult(previousAnswer) {
+            let urls = {
+                "sweet-snacks": "sweet-snacks.html",
+                "savory-snacks": "savory-snacks.html",
+                "food-casual": "food-casual.html",
+                "beaches": "beaches.html",
+                "botanical-gardens": "botanical-gardens.html",
+                "breakfast": "breakfast.html",
+                "food-fancy": "food-fancy.html",
+                "hikes": "hikes.html",
+                "history-culture": "history-culture.html",
+                "other-to-do": "other-to-do.html",
+                "science-nature": "science-nature.html",
+                "default": "index.html"
+            };
+
+            let selectedUrl = urls[previousAnswer] || urls["default"];
+            window.location.href = selectedUrl;
+        }
+    </script>
+
+    <p><a href="to-do-hawaii.html">Refresh page</a></p>
+    <p><a href="index.html">Return to wedding homepage</a></p>
+
     
-<p><a href="index.html">Return to home page</a></p>
+    <div class="footer-space"></div> 
 </body>
 </html>
