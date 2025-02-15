@@ -1,0 +1,37 @@
+
+h2 {text-align: center;
+        color: #614051}
+        
+.divider {
+      width: 100%; /* This makes the image span the full width */
+      display: block; /* Ensures the image is displayed as a block element */
+      height: auto; /* Maintains the aspect ratio of the image */
+    }
+        
+.header-link {
+            target= "_blank";
+            font-size: 24px;
+        }
+header {
+    font-size: 24px;
+}
+    
+/* Spacing at the Bottom */
+.footer-space {
+    height: 100px; /* Adjust space as needed */
+}
+
+button {
+    background-color: #614051;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #483248;
+}
