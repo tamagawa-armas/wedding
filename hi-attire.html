@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hawaii Attire</title>
+    <link rel="icon" type="image/png" href="hibiscus%20rebellion%20icon.png">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .gallery img {
+            height: 400px; /* Set a uniform height */
+            width: auto; /* Maintain aspect ratio */
+            max-width: 100%; /* Ensures responsiveness */
+            object-fit: cover; /* Crop images to fit */
+            box-shadow: 5px 5px 15px rgba(255, 0, 0, 0.5); /* shadow*/
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 4px 4px 10px #614051;
+        }
+
+        /* Responsive: Stack images in a column on small screens */
+        @media (max-width: 600px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            
+        }
+        
+        .divider-bar {
+      width: 100%;           /* Makes the divider span the full width of the page */
+      height: 4px;           /* Height of the divider (adjustable) */
+      background-color: #614051;  /* Color of the divider (change to your preferred color) */
+      border: none;          /* No borders around the divider */
+      margin: 20px 0;        /* Add some space above and below the divider */
+    }
+        
+        .divider {
+      width: 100%; /* This makes the image span the full width */
+      display: block; /* Ensures the image is displayed as a block element */
+      height: auto; /* Maintains the aspect ratio of the image */
+    }
+        
+    button {
+    background-color: #614051;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    button:hover {
+        background-color: #483248;
+    }    
+    
+    .footer-space {
+    height: 50px; /* Adjust space as needed */
+}
+        
+body {
+    margin: 8px; /* Keep a small border effect */
+    border: 5px solid white; /* Explicitly define it */
+}
+    
+    </style>
+
+</head>
+
+
+
+
+<img src="hawaii-pic-crop.jpg" alt="Divider Image" class="divider">
+
+<body>
+    
+    
+    <h1>A guide to appropriate attire for the Hawaii ceremony and reception</h1>
+    
+    <div class="footer-space"></div>
+    
+    <div id="good">
+    <h2>Aloha formal/business casual</h2>
+    <p>The following are examples of appropriate attire for the Hawaii event.</p>
+
+    <div class="gallery">
+        <p><img src="attire/aloha-formal.jpg" alt="Aloha formal example"></p>
+        
+        <p><img src="attire/business-casual.JPG" alt="Business casual example"></p>
+    </div>
+    
+    <p>* Reverse print means that the shirt is sewn so that the print is on the inside, giving the garment a more muted look. </p>
+    <p>&#8224; This would ideally be an aloha print, but Sheri doesn't own any. However, the pattern on this dress is close enough.</p>
+    
+    <p><br></p>
+    
+    <p>We expect most people to wear clothes they already own. However, if you're looking to buy quality aloha attire, our favorite store is <a href="https://www.reynspooner.com/"; target="_blank">Reyn Spooner</a>.</p>
+        
+    </div>
+    
+    <div class="footer-space"></div>
+    
+    <div class="divider-bar"></div>
+    
+    <h2>NOT aloha formal/business casual</h2>
+    <p>You will look out of place if you show up in the following outfits.</p>
+    
+    <div class="gallery">
+        <img src = "attire/tacky-tourist.JPG" alt="tacky tourist example">
+        
+        <img src = "attire/too-casual.JPG" alt="casual example">
+        
+        <img src = "attire/too-formal.JPG" alt = "formal example">
+    
+    </div>
+
+</body>
+
+
+
+
+
+
+
+
+<div class="footer-space"></div>
+    <p style="text-align: center"><a href="index.html"><button>Return to home page</button></a></p>
+    
+<div class="footer-space"></div>
+
+
+
+
+
+
+
+</html>

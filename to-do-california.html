@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="hibiscus%20rebellion%20icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do in "Los Angeles"</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #614051;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #483248;
+        }
+        #result {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>What should I do in "Los Angeles"?</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="options">
+                <button onclick="chooseOption('A')">I'm willing to drive far</button>
+                <button onclick="chooseOption('B')">I'd rather drive less</button>
+                <button onclick="chooseOption('C')">I'm just hungry</button>
+            </div>
+        </div>
+        <div id="result" style="display:none;"></div>
+    </div>
+
+    <script>
+        function chooseOption(choice) {
+            document.getElementById("options").style.display = "none";
+
+            if (choice === 'A') {
+                showNextChoices2("Go toward Canada", "Go toward Mexico");
+            } else if (choice === 'B') {
+                showNextChoices3("Theme Park", "Educational", "Sightseeing");
+            } else if (choice === 'C') {
+                showNextChoices3("Mexican", "Japanese/Hawaii Kine Grindz", "California Specials");
+            } else if (choice=="Go toward Canada") {
+                showResult("ca-north")
+            } else if (choice=="Go toward Mexico") {
+                showResult("ca-south")
+            } else if (choice=="Theme Park") {
+                showResult("ca-theme-parks")
+            } else if (choice=="Educational") {
+                showResult("ca-educational")
+            } else if (choice=="Sightseeing") {
+                showResult("ca-sights")
+            } else if (choice=="Mexican") {
+                showResult("ca-mexican-food")
+            } else if (choice=="Japanese/Hawaii Kine Grindz") {
+                showResult("ca-local-food")
+            } else if (choice=="California Specials") {
+                showResult("ca-california-food")
+            }
+            
+        }
+
+        function showNextChoices2(option1, option2) {
+            let questionText = `What do you want?`;
+            document.getElementById("question").innerText = questionText;
+            
+            let optionsHTML = `
+                <button onclick="chooseOption('${option1}')">${option1}</button>
+                <button onclick="chooseOption('${option2}')">${option2}</button>
+            `;
+            
+            document.getElementById("options").innerHTML = optionsHTML;
+            document.getElementById("options").style.display = "block";
+        }
+        
+        function showNextChoices3(option1, option2, option3) {
+            let questionText = `What do you want?`;
+            document.getElementById("question").innerText = questionText;
+            
+            let optionsHTML = `
+                <button onclick="chooseOption('${option1}')">${option1}</button>
+                <button onclick="chooseOption('${option2}')">${option2}</button>
+                <button onclick="chooseOption('${option3}')">${option3}</button>
+
+            `;
+            
+            document.getElementById("options").innerHTML = optionsHTML;
+            document.getElementById("options").style.display = "block";
+        }
+
+        function showResult(previousAnswer) {
+            let urls = {
+                "ca-north": "ca-north.html",
+                "ca-south": "ca-south.html",
+                "ca-theme-parks": "ca-theme-parks.html",
+                "ca-educational": "ca-educational.html",
+                "ca-sights": "ca-sights.html",
+                "ca-mexican-food": "ca-mexican-food.html",
+                "ca-local-food": "ca-local-food.html",
+                "ca-california-food": "ca-california-food.html",
+                "default": "index.html"
+            };
+
+            let selectedUrl = urls[previousAnswer] || urls["default"];
+            window.location.href = selectedUrl;
+        }
+    </script>
+
+    <p><a href="to-do-california.html">Refresh page</a></p>
+    <p><a href="index.html">Return to wedding homepage</a></p>
+
+    
+    <div class="footer-space"></div> 
+</body>
+</html>
+
+
