@@ -19,10 +19,10 @@
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px #781f6d;
         }
         button {
-            background-color: #614051;
+            background-color: #781f6d;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -84,7 +84,7 @@
             } else if (choice == "Other"){
                 showResult("other-to-do");
             } else if (choice =="A meal") {
-                showNextChoices2("Breakfast", "Lunch or Dinner");
+                showNextChoices3("Breakfast", "Lunch or Dinner", "A Luau",);
             } else if (choice =="Breakfast") {
                 showResult("breakfast");
             } else if (choice=="Lunch or Dinner") {
@@ -92,7 +92,9 @@
             } else if (choice=="Casual Restaurant") {
                 showResult("food-casual");
             } else if (choice=="Aloha Formal Restaurant") {
-                showResult("food-fancy")
+                showResult("food-fancy");
+            } else if (choice=="A Luau") {
+                showResult("luaus");
             }
             
         }
@@ -109,6 +111,21 @@
             document.getElementById("options").innerHTML = optionsHTML;
             document.getElementById("options").style.display = "block";
         }
+        
+        function showNextChoices3(option1, option2, option3) {
+            let questionText = `What do you want?`;
+            document.getElementById("question").innerText = questionText;
+            
+            let optionsHTML = `
+                <button onclick="chooseOption('${option1}')">${option1}</button>
+                <button onclick="chooseOption('${option2}')">${option2}</button>
+                <button onclick="chooseOption('${option3}')">${option3}</button>
+            `;
+            
+            document.getElementById("options").innerHTML = optionsHTML;
+            document.getElementById("options").style.display = "block";
+        }
+        
         
         function showNextChoices4(option1, option2, option3, option4) {
             let questionText = `What do you want?`;
@@ -138,7 +155,8 @@
                 "history-culture": "history-culture.html",
                 "other-to-do": "other-to-do.html",
                 "science-nature": "science-nature.html",
-                "default": "index.html"
+                "default": "index.html",
+                "luaus": "luau.html",
             };
 
             let selectedUrl = urls[previousAnswer] || urls["default"];
